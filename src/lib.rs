@@ -2,6 +2,7 @@
 
 // Clippy warns that it's dangerous to derive `PartialEq` and explicitly implement `Hash`, but the
 // `blstrs` types don't implement `Hash`, so we can't derive it.
+#![cfg_attr(not(feature = "std"), no_std)]
 #![allow(clippy::derive_hash_xor_eq)]
 #![warn(missing_docs)]
 

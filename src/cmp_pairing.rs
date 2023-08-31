@@ -1,3 +1,6 @@
+#![cfg(all(feature = "sgx_std", not(feature = "std")))]
+use sgx_tstd as std;
+
 use std::cmp::Ordering;
 
 use group::prime::PrimeCurveAffine;

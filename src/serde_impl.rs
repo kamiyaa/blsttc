@@ -1,4 +1,6 @@
 //! Serialization and deserialization implementations for group and field elements.
+#![cfg(all(feature = "sgx_std", not(feature = "std")))]
+use sgx_tstd as std;
 
 pub use self::field_vec::FieldWrap;
 

@@ -16,6 +16,9 @@
 //! This module defines univariate polynomials (in one variable) and _symmetric_ bivariate
 //! polynomials (in two variables) over a field `Fr`, as well as their _commitments_ in `G`.
 
+#![cfg(all(feature = "sgx_std", not(feature = "std")))]
+use sgx_tstd as std;
+
 use std::borrow::Borrow;
 use std::cmp::Ordering;
 use std::fmt::{self, Debug, Formatter};
